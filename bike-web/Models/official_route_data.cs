@@ -15,25 +15,13 @@ namespace bike_web.Models
 using System;
     using System.Collections.Generic;
     
-public partial class official_route_data
-{
-
-    public int id { get; set; }
-
-    public string official_data_catalog { get; set; }
-
-    public string official_data_img { get; set; }
-
-    public string official_data_img_info { get; set; }
-
-    public string official_data_content { get; set; }
-
-    public int home_id { get; set; }
-
-
-
-    public virtual Home Home { get; set; }
-
-}
-
+    public partial class official_route_data
+    {
+        public int id { get; set; }
+        public string official_data_catalog { get; set; }
+        public string official_data_img { get; set; }
+        public string official_data_img_info { get; set; }
+        public string official_data_content { get; set; }
+        public int home_id { get; set; }
+    }
 }
