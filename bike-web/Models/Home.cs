@@ -15,54 +15,22 @@ namespace bike_web.Models
 using System;
     using System.Collections.Generic;
     
-public partial class Home
-{
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public Home()
+    public partial class Home
     {
-
-        this.hashtags = new HashSet<hashtag>();
-
-        this.official_route_comment = new HashSet<official_route_comment>();
-
-        this.official_route_data = new HashSet<official_route_data>();
-
-        this.user_favorite = new HashSet<user_favorite>();
-
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Home()
+        {
+            this.official_route_comment = new HashSet<official_route_comment>();
+        }
+    
+        public int id { get; set; }
+        public string hname { get; set; }
+        public string hdescription { get; set; }
+        public string hrank { get; set; }
+        public Nullable<decimal> hdistance { get; set; }
+        public string himg { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<official_route_comment> official_route_comment { get; set; }
     }
-
-
-    public int id { get; set; }
-
-    public string hname { get; set; }
-
-    public string hdescription { get; set; }
-
-    public string hrank { get; set; }
-
-    public Nullable<decimal> hdistance { get; set; }
-
-    public string himg { get; set; }
-
-
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<hashtag> hashtags { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<official_route_comment> official_route_comment { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<official_route_data> official_route_data { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<user_favorite> user_favorite { get; set; }
-
-}
-
 }

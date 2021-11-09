@@ -12,47 +12,32 @@
 
 namespace bike_web.Models
 {
-
-using System;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-
-
-public partial class KSBikeEntities : DbContext
-{
-    public KSBikeEntities()
-        : base("name=KSBikeEntities")
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    
+    public partial class KSBikeEntities : DbContext
     {
-
+        public KSBikeEntities()
+            : base("name=KSBikeEntities")
+        {
+        }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+    
+        public virtual DbSet<Home> Homes { get; set; }
+        public virtual DbSet<official_route_comment> official_route_comment { get; set; }
+        public virtual DbSet<order> orders { get; set; }
+        public virtual DbSet<private_route_comment> private_route_comment { get; set; }
+        public virtual DbSet<product> products { get; set; }
+        public virtual DbSet<user> users { get; set; }
+        public virtual DbSet<hashtag> hashtags { get; set; }
+        public virtual DbSet<official_route_data> official_route_data { get; set; }
+        public virtual DbSet<private_route> private_route { get; set; }
+        public virtual DbSet<user_favorite> user_favorite { get; set; }
     }
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        throw new UnintentionalCodeFirstException();
-    }
-
-
-    public virtual DbSet<hashtag> hashtags { get; set; }
-
-    public virtual DbSet<Home> Homes { get; set; }
-
-    public virtual DbSet<official_route_comment> official_route_comment { get; set; }
-
-    public virtual DbSet<official_route_data> official_route_data { get; set; }
-
-    public virtual DbSet<order> orders { get; set; }
-
-    public virtual DbSet<private_route> private_route { get; set; }
-
-    public virtual DbSet<private_route_comment> private_route_comment { get; set; }
-
-    public virtual DbSet<product> products { get; set; }
-
-    public virtual DbSet<user_favorite> user_favorite { get; set; }
-
-    public virtual DbSet<user> users { get; set; }
-
-}
-
 }
 

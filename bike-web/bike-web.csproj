@@ -387,11 +387,6 @@
     <Content Include="Views\OnlyOffRoute\List.cshtml" />
     <Content Include="Views\Home\chatroom.cshtml" />
     <Content Include="Views\COfficialR\theRoute.cshtml" />
-    <Content Include="Views\shopIndex\AddToCart.cshtml" />
-    <Content Include="Views\shopIndex\GoBuy.cshtml" />
-    <Content Include="Views\shopIndex\myorder.cshtml" />
-    <Content Include="Views\shopIndex\shopIndex.cshtml" />
-    <Content Include="Views\shopIndex\shoppingCar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Member\routeEditPage.cshtml" />
